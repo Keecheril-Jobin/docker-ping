@@ -1,0 +1,16 @@
+PREREQUISITES:
+1. You should have docker installed.
+2. Use docker pull and get the container image of alpine. The command used is (docker pull alpine).
+3. Confirm that docker service is active using (systemctl status docker.service). 
+If it shows up as inactive start the docker service by (systemctl start docker).
+
+Now you are ready to create your own dockerfile using alpine container image.
+
+STEPS:
+1. Create a directory named eg.Dockerfile
+2. Create a file named eg.dockerfile inside the directory and copy the contents of the uploaded dockerfile.
+3. Now we need to build our dockerfile, it is done using command (docker build -t {{name of the container image}} /path/to/your/dockerfile/directory).
+eg. docker build -t ping-check /Dockerfile/dockerfile
+4. After the image build is completed you can see your docker image using command (docker images).
+5. Now you can run the docker container image using command (docker run {{ name of your container image }}).
+eg. docker run ping-check - This will by default ping to google you can ping other websites or IP addresses too. 
